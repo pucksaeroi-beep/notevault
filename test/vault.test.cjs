@@ -48,7 +48,7 @@ test('save writes a backup and verify() checks the key', async () => {
   assert.ok(!vault.verify(dir, Buffer.alloc(32)));
 });
 
-test('sanitizeItem accepts the Inmylife item shape', () => {
+test('sanitizeItem accepts the plain {type,title,fields[{label,value,secret}]} shape', () => {
   const it = vault.sanitizeItem({ id: 'abc123', type: 'login', title: 'T', category: 'C',
     fields: [{ id: 'f1', label: 'user', value: 'u', secret: false }, { id: 'f2', label: 'pw', value: 'p', secret: true }], notes: 'n', favorite: 1 });
   assert.strictEqual(it.fields[0].kind, 'text');

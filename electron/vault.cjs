@@ -99,7 +99,7 @@ async function changePassword(dir, oldPw, newPw) {
   return true;
 }
 
-// ---- item sanitising (same shape as the Inmylife vault, plus optional field.kind) ----
+// ---- item sanitising (simple portable JSON shape, plus optional field.kind) ----
 const KINDS = new Set(['text', 'password', 'url', 'email', 'phone', 'totp', 'pin', 'multiline']);
 const TYPES = new Set(['login', 'card', 'bank', 'wifi', 'identity', 'note', 'other']);
 const str = (v, max = 20000) => (v == null ? '' : String(v)).slice(0, max);

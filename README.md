@@ -45,7 +45,7 @@ npm run install-app     # build แล้วคัดลอก NoteVault.app ไ
 - สร้างรหัสผ่าน (สุ่ม / เป็นคำ / PIN), วัดความแข็งแรง, หา “รหัสอ่อน” และ “รหัสซ้ำ”
 - คัดลอกแล้วล้างคลิปบอร์ดเอง, ล็อกอัตโนมัติเมื่อไม่ใช้งาน / ล็อกจอ / พักเครื่อง
 - **ล็อกโน้ต**: เข้ารหัสเนื้อหาโน้ตด้วยรหัสผ่านหลักเดียวกัน
-- นำเข้า JSON รูปแบบเดียวกับ Inmylife vault: `{"items":[{"type","title","category","fields":[{"label","value","secret"}],"notes"}]}`
+- นำเข้า JSON รูปแบบ: `{"items":[{"type","title","category","fields":[{"label","value","secret"}],"notes"}]}`
 
 ## ข้อมูลเก็บที่ไหน
 
