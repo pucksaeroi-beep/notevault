@@ -8,6 +8,25 @@ import { CALLOUTS } from './extensions.js';
 const td = new TurndownService({ headingStyle: 'atx', codeBlockStyle: 'fenced', bulletListMarker: '-', emDelimiter: '*', hr: '---' });
 td.use(gfm);
 
+// tight lists: "- item" / "1. item" (TipTap wraps every item in <p>, which turndown would make loose)
+td.addRule('listParagraph', {
+  filter: (n) => n.nodeName === 'P' && n.parentNode?.nodeName === 'LI',
+  replacement: (c, node) => (node.nextElementSibling ? c + '\n' : c),
+});
+td.addRule('listItem', {
+  filter: 'li',
+  replacement: (content, node, options) => {
+    const parent = node.parentNode;
+    let prefix = options.bulletListMarker + ' ';
+    if (parent.nodeName === 'OL') {
+      const start = Number(parent.getAttribute('start')) || 1;
+      prefix = start + Array.prototype.indexOf.call(parent.children, node) + '. ';
+    }
+    const pad = ' '.repeat(prefix.length);
+    content = content.replace(/^\n+/, '').replace(/\n+$/, '').replace(/\n/g, '\n' + pad);
+    return prefix + content + '\n';
+  },
+});
 td.addRule('taskItem', {
   filter: (n) => n.nodeName === 'LI' && n.getAttribute('data-type') === 'taskItem',
   replacement: (content, node) => {
