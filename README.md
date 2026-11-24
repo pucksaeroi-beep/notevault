@@ -13,6 +13,7 @@ Word-level formatting · Confluence-style blocks · real Markdown · AES-256 pas
 ![TipTap](https://img.shields.io/badge/editor-TipTap%20%2F%20ProseMirror-6a5cff)
 ![Offline](https://img.shields.io/badge/network-none-success)
 ![Encryption](https://img.shields.io/badge/vault-AES--256--GCM%20%2B%20scrypt-blue)
+[![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 
 [Features](#-features) · [Install](#-install) · [Shortcuts](#%EF%B8%8F-keyboard-shortcuts) · [Security](#-security-model) · [ภาษาไทย](#-ภาษาไทย)
 
@@ -205,6 +206,10 @@ test/             node:test suite for crypto and storage
 ```
 
 Built with [Electron](https://www.electronjs.org/), [TipTap](https://tiptap.dev/) / ProseMirror, [lowlight](https://github.com/wooorm/lowlight), [marked](https://marked.js.org/), [turndown](https://github.com/mixmark-io/turndown) and [Vite](https://vitejs.dev/).
+
+## 📄 License
+
+[MIT](LICENSE) © 2026 pucksaeroi-beep
 
 ---
 
