@@ -13,7 +13,8 @@
     "start": "vite build && electron .",
     "test": "node --test test/*.test.cjs",
     "dist": "vite build && electron-builder --mac --publish never",
-    "install-app": "npm run dist && node scripts/install-app.mjs"
+    "install-app": "npm run dist && node scripts/install-app.mjs",
+    "release": "npm run dist && node scripts/release.mjs"
   },
   "build": {
     "appId": "local.notevault.app",

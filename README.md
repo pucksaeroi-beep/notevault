@@ -15,7 +15,11 @@ Word-level formatting · Confluence-style blocks · real Markdown · AES-256 pas
 ![Encryption](https://img.shields.io/badge/vault-AES--256--GCM%20%2B%20scrypt-blue)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 
-[Features](#-features) · [Install](#-install) · [Shortcuts](#%EF%B8%8F-keyboard-shortcuts) · [Security](#-security-model) · [ภาษาไทย](#-ภาษาไทย)
+<a href="https://github.com/pucksaeroi-beep/notevault/releases/latest/download/NoteVault-mac-arm64.dmg"><img src="https://img.shields.io/badge/Download%20for%20macOS-Apple%20Silicon-000?style=for-the-badge&logo=apple&logoColor=white" alt="Download NoteVault for macOS" height="40" /></a>
+
+<sub>No build needed · free · <a href="#%EF%B8%8F-download">first-launch steps</a> · <a href="https://github.com/pucksaeroi-beep/notevault/releases">all releases</a></sub>
+
+[Download](#%EF%B8%8F-download) · [Features](#-features) · [Install](#-install) · [Shortcuts](#%EF%B8%8F-keyboard-shortcuts) · [Security](#-security-model) · [ภาษาไทย](#-ภาษาไทย)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/hero-dark.png" />
@@ -25,6 +29,13 @@ Word-level formatting · Confluence-style blocks · real Markdown · AES-256 pas
 </div>
 
 ---
+
+## ⬇️ Download
+
+1. **[Download NoteVault-mac-arm64.dmg](https://github.com/pucksaeroi-beep/notevault/releases/latest/download/NoteVault-mac-arm64.dmg)** for Macs with Apple Silicon (M1 or newer). On an Intel Mac, [build it from source](#-install).
+2. Open the DMG and drag **NoteVault** into **Applications**.
+3. The first time you open it, macOS blocks it because the app is not notarized by Apple. Go to **System Settings → Privacy & Security**, scroll down and click **Open Anyway**. You only do this once.
+   Or run this in Terminal: `xattr -dr com.apple.quarantine /Applications/NoteVault.app`
 
 ## Why NoteVault?
 
@@ -214,6 +225,8 @@ Built with [Electron](https://www.electronjs.org/), [TipTap](https://tiptap.dev/
 ---
 
 ## 🇹🇭 ภาษาไทย
+
+**ดาวน์โหลดไปใช้ได้เลย ไม่ต้อง build เอง:** [NoteVault-mac-arm64.dmg](https://github.com/pucksaeroi-beep/notevault/releases/latest/download/NoteVault-mac-arm64.dmg) (สำหรับ Mac ชิป M1 ขึ้นไป) เปิดไฟล์แล้วลาก NoteVault ไปไว้ใน Applications ตอนเปิดครั้งแรก macOS จะไม่ยอมให้เปิด ให้ไปที่ **System Settings → Privacy & Security** แล้วกด **Open Anyway** (ทำแค่ครั้งเดียว)
 
 **NoteVault** คือแอปจดโน้ตพร้อมตู้เซฟรหัสผ่านสำหรับ Mac ทำงานในเครื่องเท่านั้น ไม่ต้องต่ออินเทอร์เน็ต ไม่ต้องมีบัญชี Apple Developer และไม่ต้องลง Xcode
 
